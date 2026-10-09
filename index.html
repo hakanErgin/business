@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hakan Ergin — Yazılım Geliştirme</title>
+<meta name="description" content="Hakan Ergin — software development, secure document archiving and encrypted cloud storage. Çanakkale, Türkiye.">
+<style>
+  :root { color-scheme: light dark; --bg: #fbfaf7; --surface: #ffffff; --fg: #1c1b19; --muted: #5f5d58; --line: #e4e1da; --accent: #1f5c4a; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #141413; --surface: #1d1c1a; --fg: #ecebe6; --muted: #a3a19a; --line: #33312d; --accent: #7cc4a8; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 0 16px; }
+  header { border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; padding-bottom: 1rem; }
+  .brand { font-weight: 650; letter-spacing: -.01em; }
+  .lang button { font: inherit; font-size: .875rem; background: none; border: 1px solid var(--line); color: var(--muted); padding: .2rem .6rem; border-radius: 6px; cursor: pointer; }
+  .lang button[aria-pressed="true"] { color: var(--fg); border-color: var(--fg); }
+  h1 { font-size: clamp(1.75rem, 5vw, 2.4rem); line-height: 1.2; letter-spacing: -.02em; margin: 3rem 0 .75rem; }
+  h2 { font-size: 1.15rem; margin: 2.75rem 0 1rem; }
+  p { margin: 0 0 1rem; }
+  .lead { color: var(--muted); font-size: 1.1rem; max-width: 38rem; }
+  .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.1rem; }
+  .card h3 { font-size: 1rem; margin: 0 0 .4rem; }
+  .card p { color: var(--muted); font-size: .95rem; margin: 0; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: .45rem 1.25rem; margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.1rem; }
+  dt { color: var(--muted); }
+  dd { margin: 0; overflow-wrap: anywhere; }
+  @media (max-width: 30rem) { dl { grid-template-columns: 1fr; } dd { margin-bottom: .5rem; } }
+  a { color: var(--accent); }
+  footer { border-top: 1px solid var(--line); margin-top: 3.5rem; padding: 1.25rem 0 2rem; color: var(--muted); font-size: .875rem; }
+  [data-lang] { display: none; }
+  html[lang="tr"] [data-lang="tr"], html[lang="en"] [data-lang="en"] { display: revert; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Hakan Ergin</div>
+    <div class="lang" role="group" aria-label="Language / Dil">
+      <button type="button" data-set-lang="tr" aria-pressed="true">TR</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>
+    <span data-lang="tr">Yazılım geliştirme ve güvenli belge arşivleme</span>
+    <span data-lang="en">Software development and secure document archiving</span>
+  </h1>
+  <p class="lead">
+    <span data-lang="tr">Çanakkale merkezli şahıs işletmesi. Muhasebe büroları gibi hassas veriyle çalışan işletmeler için yazılım geliştiriyor, verileri bulut hizmetlerinde şifreli ve doğrulanmış biçimde saklayan sistemler kuruyoruz.</span>
+    <span data-lang="en">A sole proprietorship based in Çanakkale, Türkiye. We build software for businesses that handle sensitive data, such as accounting offices, including systems that store that data in cloud services in encrypted, verified form.</span>
+  </p>
+
+  <h2><span data-lang="tr">Hizmetler</span><span data-lang="en">Services</span></h2>
+  <div class="cards">
+    <div class="card">
+      <h3><span data-lang="tr">Belge arşivleme yazılımı</span><span data-lang="en">Document archive software</span></h3>
+      <p><span data-lang="tr">Muhasebe büroları için mükellef ve dönem bazlı belge arşivi. Kaynak dosyalar değiştirilmeden saklanır, her arşiv kopyası yazıldıktan sonra geri okunarak doğrulanır.</span><span data-lang="en">A per-client, per-period document archive for accounting offices. Source files are kept byte-for-byte unchanged and every archive copy is read back and verified after it is written.</span></p>
+    </div>
+    <div class="card">
+      <h3><span data-lang="tr">Şifreli bulut depolama</span><span data-lang="en">Encrypted cloud storage</span></h3>
+      <p><span data-lang="tr">Hassas müşteri verilerinin bulut sağlayıcılarına gönderilmeden önce şifrelenmesi, erişimin sınırlandırılması ve bütünlüğün sağlama toplamlarıyla kontrol edilmesi.</span><span data-lang="en">Encrypting sensitive client data before it reaches cloud providers, restricting access, and checking integrity with checksums.</span></p>
+    </div>
+    <div class="card">
+      <h3><span data-lang="tr">Özel yazılım geliştirme</span><span data-lang="en">Custom software development</span></h3>
+      <p><span data-lang="tr">Web, masaüstü ve mobil uygulamalar; işletmeye özel yazılımların tasarımı ve geliştirilmesi.</span><span data-lang="en">Web, desktop and mobile applications, designed and built for each client's needs.</span></p>
+    </div>
+  </div>
+
+  <h2><span data-lang="tr">Ürünler</span><span data-lang="en">Products</span></h2>
+  <div class="cards">
+    <div class="card">
+      <h3>TapLens</h3>
+      <p><span data-lang="tr">Ekrandaki metni yerinde çeviren Android uygulaması.</span><span data-lang="en">An Android overlay translator that translates on-screen text in place.</span> <a href="https://hakanergin.github.io/">hakanergin.github.io</a></p>
+    </div>
+  </div>
+
+  <h2><span data-lang="tr">İşletme bilgileri</span><span data-lang="en">Business details</span></h2>
+  <dl>
+    <dt><span data-lang="tr">İşletme sahibi</span><span data-lang="en">Owner</span></dt>
+    <dd>Hakan Ergin</dd>
+    <dt><span data-lang="tr">Yasal yapı</span><span data-lang="en">Legal form</span></dt>
+    <dd><span data-lang="tr">Şahıs işletmesi (esnaf ve sanatkâr)</span><span data-lang="en">Sole proprietorship (registered tradesman)</span></dd>
+    <dt><span data-lang="tr">Vergi dairesi / VKN</span><span data-lang="en">Tax office / Tax ID</span></dt>
+    <dd>Çanakkale / 3550300677</dd>
+    <dt><span data-lang="tr">Esnaf sicil no</span><span data-lang="en">Tradesman registry no.</span></dt>
+    <dd><span data-lang="tr">93331 — Çanakkale Esnaf ve Sanatkarlar Odaları Birliği</span><span data-lang="en">93331 — Çanakkale Union of Tradesmen and Craftsmen Chambers</span></dd>
+    <dt><span data-lang="tr">Faaliyet</span><span data-lang="en">Activity</span></dt>
+    <dd><span data-lang="tr">621000 — Bilgisayar programlama faaliyetleri</span><span data-lang="en">NACE 62.01 — Computer programming activities</span></dd>
+    <dt><span data-lang="tr">Kuruluş</span><span data-lang="en">Established</span></dt>
+    <dd>16.12.2024</dd>
+    <dt><span data-lang="tr">Konum</span><span data-lang="en">Location</span></dt>
+    <dd>Çanakkale, Türkiye</dd>
+    <dt><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span></dt>
+    <dd><a href="mailto:hakan.ergin@gmail.com">hakan.ergin@gmail.com</a></dd>
+  </dl>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y">2026</span> Hakan Ergin · Çanakkale, Türkiye</div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    function setLang(lang) {
+      root.lang = lang;
+      document.title = lang === "tr" ? "Hakan Ergin — Yazılım Geliştirme" : "Hakan Ergin — Software Development";
+      document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+        b.setAttribute("aria-pressed", String(b.dataset.setLang === lang));
+      });
+      try { localStorage.setItem("lang", lang); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem("lang"); } catch (e) {}
+    var fromUrl = new URLSearchParams(location.search).get("lang");
+    var initial = fromUrl || saved || ((navigator.language || "").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+    setLang(initial === "tr" ? "tr" : "en");
+    document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+      b.addEventListener("click", function () { setLang(b.dataset.setLang); });
+    });
+    document.getElementById("y").textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
