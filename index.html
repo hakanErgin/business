@@ -24,6 +24,7 @@
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.1rem; }
   .card h3 { font-size: 1rem; margin: 0 0 .4rem; }
   .tag { display: inline-block; vertical-align: middle; margin-left: .35rem; font-size: .72rem; font-weight: 600; color: var(--accent); border: 1px solid currentColor; border-radius: 999px; padding: 0 .45rem; }
+  ul { margin: 0; padding-left: 1.2rem; } li { margin-bottom: .35rem; }
   .card p { color: var(--muted); font-size: .95rem; margin: 0; }
   dl { display: grid; grid-template-columns: max-content 1fr; gap: .45rem 1.25rem; margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.1rem; }
   dt { color: var(--muted); }
@@ -52,8 +53,8 @@
     <span data-lang="en">Software development and secure document archiving</span>
   </h1>
   <p class="lead">
-    <span data-lang="tr">Çanakkale merkezli şahıs işletmesi. Muhasebe büroları gibi hassas veriyle çalışan işletmeler için yazılım geliştiriyor, verileri bulut hizmetlerinde şifreli ve doğrulanmış biçimde saklayan sistemler kuruyoruz.</span>
-    <span data-lang="en">A sole proprietorship based in Çanakkale, Türkiye. We build software for businesses that handle sensitive data, such as accounting offices, including systems that store that data in cloud services in encrypted, verified form.</span>
+    <span data-lang="tr">Çanakkale merkezli şahıs işletmesi. Muhasebe büroları gibi hassas veriyle çalışan işletmeler için yazılım geliştiriyor, belgeleri değiştirmeden ve doğrulanmış kopyalarla saklayan sistemler kuruyoruz.</span>
+    <span data-lang="en">A sole proprietorship based in Çanakkale, Türkiye. We build software for businesses that handle sensitive data, such as accounting offices, including systems that keep documents unchanged and store verified copies.</span>
   </p>
 
   <h2><span data-lang="tr">Hizmetler</span><span data-lang="en">Services</span></h2>
@@ -63,8 +64,8 @@
       <p><span data-lang="tr">Muhasebe büroları için mükellef ve dönem bazlı belge arşivi. Kaynak dosyalar değiştirilmeden saklanır, her arşiv kopyası yazıldıktan sonra geri okunarak doğrulanır.</span><span data-lang="en">A per-client, per-period document archive for accounting offices. Source files are kept byte-for-byte unchanged and every archive copy is read back and verified after it is written.</span></p>
     </div>
     <div class="card">
-      <h3><span data-lang="tr">Şifreli bulut depolama</span><span data-lang="en">Encrypted cloud storage</span></h3>
-      <p><span data-lang="tr">Hassas müşteri verilerinin bulut sağlayıcılarına gönderilmeden önce şifrelenmesi, erişimin sınırlandırılması ve bütünlüğün sağlama toplamlarıyla kontrol edilmesi.</span><span data-lang="en">Encrypting sensitive client data before it reaches cloud providers, restricting access, and checking integrity with checksums.</span></p>
+      <h3><span data-lang="tr">Uçtan uca şifreli arşiv</span><span data-lang="en">End-to-end encrypted archive</span> <span class="tag"><span data-lang="tr">Geliştirme aşamasında</span><span data-lang="en">In development</span></span></h3>
+      <p><span data-lang="tr">Belgelerin bürodaki cihazlarda şifrelendiği, anahtarların yalnızca büroda kaldığı bir arşiv tasarımı üzerinde çalışıyoruz. Bu özellik henüz kullanımda değildir.</span><span data-lang="en">We are designing an archive in which documents are encrypted on the office's own devices and the keys stay with the office. This feature is not yet available.</span></p>
     </div>
     <div class="card">
       <h3><span data-lang="tr">Özel yazılım geliştirme</span><span data-lang="en">Custom software development</span></h3>
@@ -83,6 +84,15 @@
       <p><span data-lang="tr">Ekrandaki metni yerinde çeviren Android uygulaması.</span><span data-lang="en">An Android overlay translator that translates on-screen text in place.</span> <a href="https://hakanergin.github.io/">hakanergin.github.io</a></p>
     </div>
   </div>
+
+  <h2><span data-lang="tr">Güvenlik</span><span data-lang="en">Security</span></h2>
+  <p><span data-lang="tr">Muhasebe Belge Arşivi pilotunda bugün uygulananlar:</span><span data-lang="en">What the Muhasebe Belge Arşivi pilot does today:</span></p>
+  <ul>
+    <li><span data-lang="tr">Yüklenen kaynak dosyalar bayt bayt değiştirilmeden saklanır.</span><span data-lang="en">Uploaded source files are stored byte-for-byte unchanged.</span></li>
+    <li><span data-lang="tr">Her arşiv kopyası yazıldıktan sonra geri okunur ve sağlama toplamıyla doğrulanır.</span><span data-lang="en">Every archive copy is read back after writing and verified by checksum.</span></li>
+    <li><span data-lang="tr">Belge önizlemeleri ağ erişimi kapalı, ayrı bir sanal alanda (sandbox) üretilir.</span><span data-lang="en">Document previews are produced in a separate sandbox with network access disabled.</span></li>
+    <li><span data-lang="tr">HTML ve XML belgeler etkisiz PDF kopyalara dönüştürülür; yüklenen içerik güvenilmez kabul edilir.</span><span data-lang="en">HTML and XML documents are converted into inert PDF copies; all uploaded content is treated as untrusted.</span></li>
+  </ul>
 
   <h2><span data-lang="tr">İşletme bilgileri</span><span data-lang="en">Business details</span></h2>
   <dl>
