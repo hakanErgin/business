@@ -23,6 +23,7 @@
   .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.1rem; }
   .card h3 { font-size: 1rem; margin: 0 0 .4rem; }
+  .tag { display: inline-block; vertical-align: middle; margin-left: .35rem; font-size: .72rem; font-weight: 600; color: var(--accent); border: 1px solid currentColor; border-radius: 999px; padding: 0 .45rem; }
   .card p { color: var(--muted); font-size: .95rem; margin: 0; }
   dl { display: grid; grid-template-columns: max-content 1fr; gap: .45rem 1.25rem; margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.1rem; }
   dt { color: var(--muted); }
@@ -74,6 +75,10 @@
   <h2><span data-lang="tr">Ürünler</span><span data-lang="en">Products</span></h2>
   <div class="cards">
     <div class="card">
+      <h3>Muhasebe Belge Arşivi <span class="tag"><span data-lang="tr">Pilot</span><span data-lang="en">Pilot</span></span></h3>
+      <p><span data-lang="tr">Muhasebe büroları için mükellef ve hesap dönemi bazlı belge arşivi. Kaynak dosyalar değiştirilmeden saklanır; arşiv kopyaları S3 uyumlu bulut depolamaya yazılıp sağlama toplamıyla doğrulanır. Pilot aşamasında, geliştirme sürüyor.</span><span data-lang="en">A per-taxpayer, per-accounting-period document archive for accounting offices, Source files stay unchanged; archive copies are written to S3-compatible cloud storage and verified by checksum. Currently in pilot and under active development.</span></p>
+    </div>
+    <div class="card">
       <h3>TapLens</h3>
       <p><span data-lang="tr">Ekrandaki metni yerinde çeviren Android uygulaması.</span><span data-lang="en">An Android overlay translator that translates on-screen text in place.</span> <a href="https://hakanergin.github.io/">hakanergin.github.io</a></p>
     </div>
@@ -85,8 +90,8 @@
     <dd>Hakan Ergin</dd>
     <dt><span data-lang="tr">Yasal yapı</span><span data-lang="en">Legal form</span></dt>
     <dd><span data-lang="tr">Şahıs işletmesi (esnaf ve sanatkâr)</span><span data-lang="en">Sole proprietorship (registered tradesman)</span></dd>
-    <dt><span data-lang="tr">Vergi dairesi / VKN</span><span data-lang="en">Tax office / Tax ID</span></dt>
-    <dd>Çanakkale / 3550300677</dd>
+    <dt><span data-lang="tr">Vergi dairesi</span><span data-lang="en">Tax office</span></dt>
+    <dd><span data-lang="tr">Çanakkale Vergi Dairesi (yıllık gelir vergisi mükellefi)</span><span data-lang="en">Çanakkale Tax Office (annual income tax payer)</span></dd>
     <dt><span data-lang="tr">Esnaf sicil no</span><span data-lang="en">Tradesman registry no.</span></dt>
     <dd><span data-lang="tr">93331 — Çanakkale Esnaf ve Sanatkarlar Odaları Birliği</span><span data-lang="en">93331 — Çanakkale Union of Tradesmen and Craftsmen Chambers</span></dd>
     <dt><span data-lang="tr">Faaliyet</span><span data-lang="en">Activity</span></dt>
